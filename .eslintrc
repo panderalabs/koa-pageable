@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:flowtype/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "analytics": true,
+    "winston": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "function-paren-newline": "off",
+    "no-underscore-dangle": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "no-confusing-arrow": "off",
+    "no-console": "off",
+    "no-this-before-super": "off",
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "flowtype/define-flow-type": "warn",
+    "flowtype/use-flow-type": "warn",
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": ["**/*.test.js"]
+      }
+    ]
+  }
+}

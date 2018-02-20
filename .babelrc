@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "8.2"
+        }
+      }
+    ],
+    "flow"
+  ],
+  "plugins": [
+    "transform-flow-strip-types",
+    "transform-class-properties"
+  ],
+  "env": {
+    "production": {
+      "ignore": [
+        "**/*.test.js",
+        "**/*.test.js.snap"
+      ]
+    },
+    "node": true
+  }
+}

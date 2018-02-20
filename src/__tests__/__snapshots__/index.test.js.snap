@@ -1,0 +1,506 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests IndexablePage class instance.toJSON() method result matches snapshot 1`] = `
+IndexedPage {
+  "first": true,
+  "ids": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  "index": Object {
+    "1": Object {
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    "2": Object {
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    "3": Object {
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    "4": Object {
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  },
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests IndexablePage class matches snapshot when valid parameters are passed to the constructor 1`] = `
+ArrayPage {
+  "content": Array [
+    Object {
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    Object {
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    Object {
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    Object {
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  ],
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests IndexablePage class results of instance.map() method result matches snapshot 1`] = `
+ArrayPage {
+  "content": Array [
+    Object {
+      "age": 0,
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    Object {
+      "age": 5,
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    Object {
+      "age": 10,
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    Object {
+      "age": 15,
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  ],
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests IndexedPage class matches snapshot when valid parameters are passed to the constructor 1`] = `
+IndexedPage {
+  "first": true,
+  "ids": Array [
+    1,
+    2,
+  ],
+  "index": Object {
+    "1": Object {
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    "2": Object {
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    "3": Object {
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    "4": Object {
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  },
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests IndexedPage class results of instance.map() method result matches snapshot 1`] = `
+IndexedPage {
+  "first": true,
+  "ids": Array [
+    1,
+    2,
+  ],
+  "index": Object {
+    "1": Object {
+      "age": 5,
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    "2": Object {
+      "age": 10,
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    "3": Object {
+      "age": 15,
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    "4": Object {
+      "age": 20,
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  },
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests ArrayPage class matches snapshot when valid parameters are passed to the constructor 1`] = `
+ArrayPage {
+  "content": Array [
+    Object {
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    Object {
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    Object {
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    Object {
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  ],
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests ArrayPage class results of instance.map() method result matches snapshot 1`] = `
+ArrayPage {
+  "content": Array [
+    Object {
+      "age": 0,
+      "firstName": "Bob",
+      "id": 1,
+      "lastName": "Stevens",
+    },
+    Object {
+      "age": 5,
+      "firstName": "Steve",
+      "id": 2,
+      "lastName": "Bobbins",
+    },
+    Object {
+      "age": 10,
+      "firstName": "Robert",
+      "id": 3,
+      "lastName": "Stevenson",
+    },
+    Object {
+      "age": 15,
+      "firstName": "Stevarino",
+      "id": 4,
+      "lastName": "Robertson",
+    },
+  ],
+  "first": true,
+  "last": true,
+  "number": 0,
+  "numberOfElements": 4,
+  "size": 20,
+  "sort": Array [
+    Order {
+      "direction": "asc",
+      "property": "firstName",
+    },
+    Order {
+      "direction": "asc",
+      "property": "lastName",
+    },
+  ],
+  "totalElements": 2,
+  "totalPages": 1,
+}
+`;
+
+exports[`Tests Pageable class default values match snapshot when constructor parameters are undefined 1`] = `
+Pageable {
+  "indexed": false,
+  "page": 0,
+  "size": 20,
+}
+`;
+
+exports[`Tests Pageable class returns a valid Sort instance when a value of type array of strings is passed to the constructor 1`] = `
+Array [
+  Order {
+    "direction": "asc",
+    "property": "valueA",
+  },
+  Order {
+    "direction": "desc",
+    "property": "valueB",
+  },
+  Order {
+    "direction": "desc",
+    "property": "valueC",
+  },
+]
+`;
+
+exports[`Tests Pageable class returns a valid Sort instance when a value of type sort is passed to the constructor 1`] = `
+Array [
+  Order {
+    "direction": "desc",
+    "property": "propertyB",
+  },
+  Order {
+    "direction": "asc",
+    "property": "propertyC",
+  },
+]
+`;
+
+exports[`Tests Pageable class returns a valid Sort instance when a value of type string is passed to the constructor 1`] = `
+Array [
+  Order {
+    "direction": "asc",
+    "property": "singleValue",
+  },
+]
+`;
+
+exports[`Tests Sort class instance.forEach() method result matches snapshot 1`] = `
+Object {
+  "directions": Array [
+    "asc",
+    "desc",
+    "asc",
+    "desc",
+    "desc",
+  ],
+  "properties": Array [
+    "propertyA",
+    "propertyB",
+    "propertyC",
+    "propertyD",
+    "propertyE",
+  ],
+}
+`;
+
+exports[`Tests Sort class instance.toJSON() method result matches snapshot 1`] = `
+Array [
+  Order {
+    "direction": "asc",
+    "property": "propertyA",
+  },
+  Order {
+    "direction": "desc",
+    "property": "propertyB",
+  },
+  Order {
+    "direction": "asc",
+    "property": "propertyC",
+  },
+  Order {
+    "direction": "desc",
+    "property": "propertyD",
+  },
+  Order {
+    "direction": "desc",
+    "property": "propertyE",
+  },
+]
+`;
+
+exports[`Tests Sort class iterates over orders using for...of loop 1`] = `
+Array [
+  Order {
+    "direction": "desc",
+    "property": "propertyB",
+  },
+  Order {
+    "direction": "asc",
+    "property": "propertyC",
+  },
+  Order {
+    "direction": "desc",
+    "property": "propertyD",
+  },
+  Order {
+    "direction": "desc",
+    "property": "propertyE",
+  },
+  undefined,
+]
+`;
+
+exports[`Tests paginate function context.state matches snapshot when paginate is called with empty strings for page and size 1`] = `
+Object {
+  "pageable": Pageable {
+    "indexed": true,
+    "page": 0,
+    "size": 10,
+    "sort": Array [
+      Order {
+        "direction": "asc",
+        "property": "firstName",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Tests paginate function context.state matches snapshot when paginate is called with string values for page and size 1`] = `
+Object {
+  "pageable": Pageable {
+    "indexed": true,
+    "page": 10,
+    "size": 15,
+    "sort": Array [
+      Order {
+        "direction": "asc",
+        "property": "firstName",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Tests paginate function context.state matches snapshot when paginate is called with undefined page, size, and sort 1`] = `
+Object {
+  "pageable": Pageable {
+    "indexed": true,
+    "page": 0,
+    "size": 10,
+  },
+}
+`;
+
+exports[`Tests paginate function context.state matches snapshot when paginate is called with valid context 1`] = `
+Object {
+  "pageable": Pageable {
+    "indexed": true,
+    "page": 1,
+    "size": 20,
+    "sort": Array [
+      Order {
+        "direction": "asc",
+        "property": "firstName",
+      },
+    ],
+  },
+}
+`;

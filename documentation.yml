@@ -1,0 +1,23 @@
+toc:
+
+  - name: Functions
+  - paginate
+
+  - name: Classes
+  - Pageable
+  - Sort
+  - Direction
+  - Order
+
+  - Page
+  - ArrayPage
+  - IndexedPage
+  - IndexablePage
+
+  - name: Errors
+  - KoaPageableError
+  - NumberFormatError
+  - InvalidSortError
+
+  - name: Flow Types
+  - DirectionType

@@ -1,0 +1,11 @@
+.idea/
+*.iml
+node_modules/
+npm-debug.log
+build/
+lib/
+.DS_STORE
+*.sublime-project
+*.sublime-workspace
+yarn-error.log
+coverage/

@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    working_directory: /tmp/koa-pageable
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache
+      - restore_cache:
+          keys:
+            - koa-pageable-node-modules-{{ .Branch}}-{{checksum "yarn.lock"}}
+            - koa-pageable-node-modules-
+      - run:
+          name: "Install dependencies"
+          command: |
+            yarn install --verbose
+      - save_cache:
+          key: koa-pageable-node-modules-{{ .Branch}}-{{checksum "yarn.lock"}}
+          paths:
+            - node_modules
+      - save_cache:
+          key: yarn-cache
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: "Run Tests"
+          command: |
+            yarn test
+      - run:
+          name: "Run build"
+          command: |
+            NODE_ENV=production yarn build
+            cd lib
+            cp ../yarn.lock .
+            yarn install --production

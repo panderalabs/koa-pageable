@@ -1,0 +1,11 @@
+[ignore]
+.*/__tests__/.*
+
+[include]
+
+[libs]
+
+[options]
+experimental.const_params=true
+include_warnings=true
+munge_underscores=true
