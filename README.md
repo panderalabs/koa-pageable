@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/panderalabs/koa-pageable.svg?branch=master)](https://travis-ci.org/panderalabs/koa-pageable)
+[![Greenkeeper badge](https://badges.greenkeeper.io/panderalabs/koa-pageable.svg)](https://greenkeeper.io/)
 
 * [About](#about)
 * [Overview](#overview)
