@@ -27,6 +27,8 @@
 * [API Documentation](#api-documentation)
 
 # About
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/panderalabs/koa-pageable.svg)](https://greenkeeper.io/)
 `koa-pageable` is middleware for pagination in [Koa](https://github.com/koajs/koa) inspired by  [Spring Data](http://docs.spring.io/spring-data/commons/docs/current/reference/html/)'s Pagination support.
 
 It allows clients of your API to easily request subsets of your data by providing query parameters to specify the amount, order, and formatting of the requested data. For instance, if you had an endpoint `/people` backed by a data store containing 1000 people records, `koa-pageable` allows a client to request the data be broken up into 10 person pages, and to receive 2nd page of people sorted by their lastname (`GET /people?page=1&size=10&sort=lastname`)
