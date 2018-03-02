@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/panderalabs/koa-pageable.svg?style=svg)](https://circleci.com/gh/panderalabs/koa-pageable)
+[![Build Status](https://travis-ci.org/panderalabs/koa-pageable.svg?branch=master)](https://travis-ci.org/panderalabs/koa-pageable)
 
 * [About](#about)
 * [Overview](#overview)
