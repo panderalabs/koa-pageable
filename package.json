@@ -1,6 +1,6 @@
 {
   "name": "@panderalabs/koa-pageable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Koa Pagination framework inspired by Spring Data's Pagination approach.",
   "keywords": [
     "koa",
