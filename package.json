@@ -11,7 +11,7 @@
   ],
   "types": "./types",
   "scripts": {
-    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs",
+    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs && yarn run dtslint",
     "build:clean": "rimraf lib",
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flowcopy": "flow-copy-source -v -i '**/__tests__/**' src lib",
@@ -42,7 +42,8 @@
     "url": "https://github.com/panderalabs/koa-pageable/issues"
   },
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "engines": {
     "node": ">=8.2.1"
