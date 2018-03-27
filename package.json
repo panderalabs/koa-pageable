@@ -9,6 +9,7 @@
     "middleware",
     "spring"
   ],
+  "types": "./types",
   "scripts": {
     "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs",
     "build:clean": "rimraf lib",
@@ -18,7 +19,8 @@
     "build:flowcheck": "flow lib/index.js.flow",
     "build:docs": "./node_modules/.bin/documentation build --infer-private ^_ --config documentation.yml --document-exported src/** -f html -o docs/",
     "lint": "eslint src/index.js",
-    "test": "jest --env=jsdom --coverageReporters=lcov --config jest.config.json"
+    "test": "jest --env=jsdom --coverageReporters=lcov --config jest.config.json",
+    "dtslint": "dtslint types"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,9 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "@types/koa": "^2.0.44",
+    "@types/lodash": "^4.14.106",
+    "lodash": "^4.17.5",
     "lodash.flatmap": "^4.5.0",
     "lodash.isempty": "^4.4.0",
     "lodash.keyby": "^4.6.0",
@@ -61,6 +66,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
     "documentation": "^5.4.0",
+    "dtslint": "^0.2.0",
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-flowtype": "^2.45.0",
@@ -69,7 +75,9 @@
     "flow-copy-source": "^1.3.0",
     "jest": "^22.4.0",
     "koa": "^2.5.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "typescript": "^2.7.2",
+    "typescript-eslint-parser": "^14.0.0"
   },
   "peerDependencies": {
     "koa": "2.x"
