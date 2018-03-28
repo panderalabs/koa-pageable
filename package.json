@@ -50,15 +50,13 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@types/koa": "^2.0.44",
-    "@types/lodash": "^4.14.106",
-    "lodash": "^4.17.5",
     "lodash.flatmap": "^4.5.0",
     "lodash.isempty": "^4.4.0",
     "lodash.keyby": "^4.6.0",
     "lodash.mapvalues": "^4.6.0"
   },
   "devDependencies": {
+    "@types/koa": "^2.0.44",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^8.2.2",
@@ -81,6 +79,7 @@
     "typescript-eslint-parser": "^14.0.0"
   },
   "peerDependencies": {
+    "@types/koa": "2.x",
     "koa": "2.x"
   }
 }

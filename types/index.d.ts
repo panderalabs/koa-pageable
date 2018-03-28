@@ -2,7 +2,6 @@
 // Project: Koa Pageable
 // Definitions by: Wolf Rourke <wolf@panderalabs.com>
 import * as Koa from 'koa';
-import { flatMap, keyBy, mapValues } from 'lodash';
 
 export enum Direction {
   asc = 'asc',
