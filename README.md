@@ -182,6 +182,9 @@ In order to support this automatic conversion, the underlying content items _mus
   "numberOfElements": 2
 }
 ```
+## Type Definitions
+
+Typescript type definitions and Flow type definitions are included in the packaged library. For typescript, a peer dependency on @types/koa is required to use the koa-pageable types. If you are not using typescript, you will see a warning that the peer dependency is not installed but it will not affect the functionality of this library. Feel free to ignore that peer dependency.
 
 # Getting Started
 
