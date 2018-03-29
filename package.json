@@ -9,7 +9,6 @@
     "middleware",
     "spring"
   ],
-  "types": "./types",
   "scripts": {
     "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs && yarn run dtslint && yarn run copy:typescript",
     "build:clean": "rimraf lib",
@@ -44,8 +43,7 @@
     "url": "https://github.com/panderalabs/koa-pageable/issues"
   },
   "files": [
-    "lib",
-    "types"
+    "lib"
   ],
   "engines": {
     "node": ">=8.2.1"
