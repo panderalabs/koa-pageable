@@ -10,15 +10,17 @@
     "spring"
   ],
   "scripts": {
-    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs",
+    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs && yarn run dtslint && yarn run copy:typescript",
     "build:clean": "rimraf lib",
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flowcopy": "flow-copy-source -v -i '**/__tests__/**' src lib",
     "build:flowtypes": "flow gen-flow-files src/index.js --out-dir lib",
     "build:flowcheck": "flow lib/index.js.flow",
     "build:docs": "./node_modules/.bin/documentation build --infer-private ^_ --config documentation.yml --document-exported src/** -f html -o docs/",
+    "copy:typescript": "node ./scripts/copyTypes.js",
     "lint": "eslint src/index.js",
-    "test": "jest --env=jsdom --coverageReporters=lcov --config jest.config.json"
+    "test": "jest --env=jsdom --coverageReporters=lcov --config jest.config.json",
+    "dtslint": "dtslint types"
   },
   "repository": {
     "type": "git",
@@ -26,13 +28,14 @@
   },
   "author": {
     "name": "Pandera Labs",
-    "email": "",
+    "email": "hello@panderalabs.com",
     "url": "https://www.panderalabs.com"
   },
   "contributors": [
     "ben madore <ben@panderalabs.com>",
-    "mike rourke <mike@panderalabs.com>",
-    "g link <g.link@panderalabs.com>"
+    "mike rourke <wolf@panderalabs.com>",
+    "g link <g.link@panderalabs.com>",
+    "ed siok <ed@panderalabs.com>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/panderalabs/koa-pageable#readme",
@@ -53,6 +56,7 @@
     "lodash.mapvalues": "^4.6.0"
   },
   "devDependencies": {
+    "@types/koa": "^2.0.44",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^8.2.2",
@@ -61,6 +65,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
     "documentation": "^5.4.0",
+    "dtslint": "^0.2.0",
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-flowtype": "^2.45.0",
@@ -69,9 +74,12 @@
     "flow-copy-source": "^1.3.0",
     "jest": "^22.4.0",
     "koa": "^2.5.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "typescript": "^2.7.2",
+    "typescript-eslint-parser": "^14.0.0"
   },
   "peerDependencies": {
+    "@types/koa": "2.x",
     "koa": "2.x"
   }
 }
