@@ -10,8 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@panderalabs/koa-pageable": ["."],
-      "koapageable": ["."]
+      "@panderalabs/koa-pageable": ["."]
     }
   }
 }

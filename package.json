@@ -11,13 +11,14 @@
   ],
   "types": "./types",
   "scripts": {
-    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs && yarn run dtslint",
+    "build": "NODE_ENV=production yarn run build:clean && yarn run lint && yarn run flow && yarn run build:lib && yarn run build:flowtypes && yarn run build:flowcheck && yarn run build:docs && yarn run dtslint && yarn run copy:typescript",
     "build:clean": "rimraf lib",
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flowcopy": "flow-copy-source -v -i '**/__tests__/**' src lib",
     "build:flowtypes": "flow gen-flow-files src/index.js --out-dir lib",
     "build:flowcheck": "flow lib/index.js.flow",
     "build:docs": "./node_modules/.bin/documentation build --infer-private ^_ --config documentation.yml --document-exported src/** -f html -o docs/",
+    "copy:typescript": "node ./scripts/copyTypes.js",
     "lint": "eslint src/index.js",
     "test": "jest --env=jsdom --coverageReporters=lcov --config jest.config.json",
     "dtslint": "dtslint types"
@@ -28,13 +29,14 @@
   },
   "author": {
     "name": "Pandera Labs",
-    "email": "",
+    "email": "hello@panderalabs.com",
     "url": "https://www.panderalabs.com"
   },
   "contributors": [
     "ben madore <ben@panderalabs.com>",
-    "mike rourke <mike@panderalabs.com>",
-    "g link <g.link@panderalabs.com>"
+    "mike rourke <wolf@panderalabs.com>",
+    "g link <g.link@panderalabs.com>",
+    "ed siok <ed@panderalabs.com>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/panderalabs/koa-pageable#readme",
